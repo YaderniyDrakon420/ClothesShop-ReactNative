@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "title": "Classic Denim Jacket",
+      "price": 110,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKglfs8wX6BZnbj9Wh72ZnIzsTHQzmx5xW-9wYIUd3gegm4uZuF6_tGKc&s=10",
+      "description": "Classic denim jacket made from durable denim fabric.",
+      "rating": "4.5",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Blue",
+        "Dark Blue"
+      ],
+      "isInCart": false
+    },
+    {
+      "id": "p2",
+      "title": "Linen Sundress",
+      "price": 128,
+      "image": "https://sonfre.com/products/ona-linen-trapeze-maxi-dress?srsltid=AU7gw4Wfhhdw7DiSRZ5UyaSkRkpVSkWnBGVcg328m27dI2Pqma8ax_JS",
+      "description": "Lightweight linen sundress for warm and sunny days.",
+      "rating": "4.7",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "White",
+        "Beige",
+        "Light Blue"
+      ],
+      "isInCart": false
+    },
+    {
+      "id": "p3",
+      "title": "Linen Sundress",
+      "price": 125,
+      "image": "https://www.thebs.com/en/woven-fit-amp-flare-dresses-classic-linen-lauren-ralph-lauren-754891",
+      "description": "Classic linen dress with a comfortable fit and elegant design.",
+      "rating": "4.6",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White",
+        "Cream",
+        "Black"
+      ],
+      "isInCart": false
+    },
+    {
+      "id": "p4",
+      "title": "Eashinn Jacket",
+      "price": 130,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKglfs8wX6BZnbj9Wh72ZnIzsTHQzmx5xW-9wYIUd3gegm4uZuF6_tGKc&s=10",
+      "description": "Modern casual jacket suitable for everyday wear.",
+      "rating": "4.8",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "color": [
+        "Black",
+        "Gray",
+        "Green"
+      ],
+      "isInCart": false
+    },
+    {
+      "id": "p5",
+      "title": "Black Long-Sleeve Sweatshirt",
+      "price": 55,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdKYQ8RwW3qPwjbhmjdeVCXg-pZuDoCSVSeuQXixr_ORqNOjLvLbQw6O4&s=10",
+      "description": "Comfortable black sweatshirt with long sleeves.",
+      "rating": "4.4",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black"
+      ],
+      "isInCart": true
+    },
+    {
+      "id": "p6",
+      "title": "Vertical Striped Short-Sleeve Shirt",
+      "price": 45,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7jt1gyv1A6hg7N3a6f_yIkop8-rTkG9LOKiOT5JlLRCh2zQAfJvIWWzr5&s=10",
+      "description": "Short-sleeve shirt with a classic vertical striped design.",
+      "rating": "4.3",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White",
+        "Blue",
+        "Black"
+      ],
+      "isInCart": false
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
