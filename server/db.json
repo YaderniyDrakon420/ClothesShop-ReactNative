@@ -18,7 +18,8 @@
         "Dark Blue"
       ],
       "isInCart": false,
-      "isLiked": true
+      "isLiked": true,
+      "categoryId": "cat2"
     },
     {
       "id": "p2",
@@ -39,7 +40,8 @@
         "Light Blue"
       ],
       "isInCart": true,
-      "isLiked": false
+      "isLiked": false,
+      "categoryId": "cat3"
     },
     {
       "id": "p3",
@@ -61,7 +63,8 @@
         "Black"
       ],
       "isInCart": false,
-      "isLiked": false
+      "isLiked": false,
+      "categoryId": "cat1"
     },
     {
       "id": "p4",
@@ -83,7 +86,8 @@
         "Green"
       ],
       "isInCart": false,
-      "isLiked": false
+      "isLiked": false,
+      "categoryId": "cat1"
     },
     {
       "id": "p5",
@@ -102,7 +106,8 @@
         "Black"
       ],
       "isInCart": true,
-      "isLiked": false
+      "isLiked": false,
+      "categoryId": "cat2"
     },
     {
       "id": "p6",
@@ -123,7 +128,333 @@
         "Black"
       ],
       "isInCart": true,
-      "isLiked": true
+      "isLiked": false,
+      "categoryId": "cat2"
+    },
+    {
+      "id": "p7",
+      "title": "Oversized White T-Shirt",
+      "price": 35,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpwp2jK1OX1w5uXLPzwy0dPxQE9zh5_1fvfFKYO1Zc4Dzzm8951QopVzGK&s=10",
+      "description": "Minimalist oversized white cotton T-shirt for everyday wear.",
+      "rating": "4.5",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White",
+        "Cream"
+      ],
+      "isInCart": false,
+      "isLiked": true,
+      "categoryId": "cat1"
+    },
+    {
+      "id": "p8",
+      "title": "Black Basic T-Shirt",
+      "price": 30,
+      "image": "https://asset.promod.com/product/254801-su-1779804573.jpg?auto=webp&quality=80&crop=10:15",
+      "description": "Classic black T-shirt with a comfortable regular fit.",
+      "rating": "4.2",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat1"
+    },
+    {
+      "id": "p9",
+      "title": "Beige Knit Sweater",
+      "price": 75,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi3E7UonI58as_cyDtT3IhxM0ic6JIKtrFhdXhs2RPpFu9rFhS_g-3RxE&s=10",
+      "description": "Soft knit sweater suitable for cool weather.",
+      "rating": "4.6",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Beige",
+        "White",
+        "Gray"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat1"
+    },
+    {
+      "id": "p10",
+      "title": "Blue Straight-Leg Jeans",
+      "price": 85,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX37_kRxn4YrAAfqUs0lwlYrx7ubP515Dhrj4dm6wqvhJSs80hzN-M1SQ1&s=10",
+      "description": "Everyday straight-leg jeans with a classic denim finish.",
+      "rating": "4.7",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Blue",
+        "Dark Blue"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat2"
+    },
+    {
+      "id": "p11",
+      "title": "Black Wide-Leg Trousers",
+      "price": 70,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKPXDh6X89kb6DzZtK6DHInRm5W7yn5d6JwhOH8SQyK79-_lE6CuotvBM_&s=10",
+      "description": "Elegant wide-leg trousers for casual and formal outfits.",
+      "rating": "4.5",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Gray"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat2"
+    },
+    {
+      "id": "p12",
+      "title": "Beige Cargo Pants",
+      "price": 78,
+      "image": "https://www.schott-store.com/cdn/shop/files/trrandy170__beige__p2-final-web.jpg?v=1738576279&width=1920",
+      "description": "Relaxed cargo pants with practical side pockets.",
+      "rating": "4.3",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Beige",
+        "Black",
+        "Green"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat2"
+    },
+    {
+      "id": "p13",
+      "title": "Classic Black Blazer",
+      "price": 145,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5YMSstWXWKtCEBzivEG17aQRBfDKNggcPSbRlw_sjscZVQiaBEp__pnM&s=10",
+      "description": "Versatile tailored blazer for smart and elegant outfits.",
+      "rating": "4.8",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Gray"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat3"
+    },
+    {
+      "id": "p14",
+      "title": "Women's Cream Cardigan",
+      "price": 82,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_lwSVuVV1PLtNDbKW6JvCcgo6KCmR_RATv5tlIoDuxg&s",
+      "description": "Lightweight cardigan with a soft texture and relaxed fit.",
+      "rating": "4.4",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "Cream",
+        "Beige",
+        "Pink"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat3"
+    },
+    {
+      "id": "p15",
+      "title": "Brown Leather-Look Jacket",
+      "price": 155,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkQp_IGs9HgT-xUIfL3EJzrMQOLiwt3JxoLZSLTiU6A&s",
+      "description": "Modern brown jacket with a timeless casual design.",
+      "rating": "4.6",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Brown",
+        "Black"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat3"
+    },
+    {
+      "id": "p16",
+      "title": "White Summer Sneakers",
+      "price": 90,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT1QXEgOog5rWnY5GiQ86V5XdKso2xWvkzNnKktWKiLXwS1Y9SRLKLogBo&s=10",
+      "description": "Comfortable everyday sneakers with a clean design.",
+      "rating": "4.5",
+      "size": [
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "color": [
+        "White",
+        "Black"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat4"
+    },
+    {
+      "id": "p17",
+      "title": "Black Crossbody Bag",
+      "price": 65,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN-sfb0hCXaSjDUEG4aJEazMtKys4bGSFK_ePaXkFYlLQYgSHfprkI9Bsm&s=10",
+      "description": "Compact crossbody bag for everyday essentials.",
+      "rating": "4.4",
+      "size": [
+        "One Size"
+      ],
+      "color": [
+        "Black",
+        "Brown",
+        "Beige"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat4"
+    },
+    {
+      "id": "p18",
+      "title": "Minimalist Silver Necklace",
+      "price": 40,
+      "image": "https://www.indieandharper.com/cdn/shop/files/sterling-silver-curb-chain-1mm-styled-bowl-finer-bright.webp?v=1789882676",
+      "description": "Minimalist necklace designed to complement everyday outfits.",
+      "rating": "4.3",
+      "size": [
+        "One Size"
+      ],
+      "color": [
+        "Silver",
+        "Gold"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat4"
+    },
+    {
+      "id": "p19",
+      "title": "Classic Baseball Cap",
+      "price": 25,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrACjMXifNWQzEIAoxUsiLgLeNMdIiW0UmugGhWedensWVEbmsWFPQQScI&s=10",
+      "description": "Adjustable baseball cap with a simple everyday design.",
+      "rating": "4.2",
+      "size": [
+        "One Size"
+      ],
+      "color": [
+        "Black",
+        "White",
+        "Blue"
+      ],
+      "isInCart": false,
+      "isLiked": false,
+      "categoryId": "cat5"
+    },
+    {
+      "id": "p20",
+      "title": "Warm Winter Scarf",
+      "price": 32,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz85TaWb8qDQ92sSgdgdoNnlUT0MFqMQFYzaIl6uHR6h5_TmdL9rjyAuc&s=10",
+      "description": "Soft scarf designed to keep you warm during colder days.",
+      "rating": "4.6",
+      "size": [
+        "One Size"
+      ],
+      "color": [
+        "Gray",
+        "Beige",
+        "Black"
+      ],
+      "isInCart": true,
+      "isLiked": true,
+      "categoryId": "cat5"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat1",
+      "title": "Tops",
+      "description": "T-shirts, sweaters and everyday tops.",
+      "image": "https://cdn-icons-png.flaticon.com/512/392/392043.png"
+    },
+    {
+      "id": "cat2",
+      "title": "Bottoms",
+      "description": "Jeans, trousers and casual pants.",
+      "image": "https://cdn-icons-png.flaticon.com/512/664/664466.png"
+    },
+    {
+      "id": "cat3",
+      "title": "Outerwear",
+      "description": "Jackets, blazers and cardigans.",
+      "image": "https://cdn-icons-png.flaticon.com/512/2719/2719743.png"
+    },
+    {
+      "id": "cat4",
+      "title": "Shoes & Bags",
+      "description": "Footwear, bags and everyday accessories.",
+      "image": "https://img.icons8.com/parakeet-filled/1200/shoes.jpg"
+    },
+    {
+      "id": "cat5",
+      "title": "Accessories",
+      "description": "Hats, scarves and jewelry.",
+      "image": "https://thumbs.dreamstime.com/b/jewelry-accessories-line-icon-linear-style-sign-mobile-concept-web-design-necklace-earrings-outline-vector-symbol-logo-313066996.jpg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

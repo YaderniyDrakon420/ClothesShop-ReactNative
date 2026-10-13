@@ -5,6 +5,7 @@ import OrdersScreen from "../screens/tab-screens/OrderScreen";
 import SettingsScreen from "../screens/tab-screens/SettingsScreen";
 import { Image } from "react-native";
 import AppTabNavigator from "./AppTabNavigator";
+import CategoriesScreen from "../screens/tab-screens/CategoriesScreen";
 
 const Drawer = createDrawerNavigator()
 
@@ -53,7 +54,22 @@ const DrawerNavigator = () => {
                         )
                     }}
             />
+            <Drawer.Screen name="Categories" component={CategoriesScreen}
+                options = {{
+                    drawerIcon: ({focused}) => (
+                        <Image
+                            source={require("../../assets/c.png")}
+                            style={{
+                                width: 29,
+                                height: 29,
+                                opacity: focused ? 1 : 0.5
+                            }} 
+                             />
+                        )
+                    }}
+            />
         </Drawer.Navigator>
+        
     )
 }
 
