@@ -14,6 +14,7 @@ interface ClothesListProps {
   loading: boolean;
   error: string | null;
   navigateToProduct: (product: ClothesProps) => void;
+  onLikeChange: (id: string | number, isLiked: boolean) => void;
 }
 
 function ClothesList({
@@ -21,7 +22,42 @@ function ClothesList({
   loading,
   error,
   navigateToProduct,
+  onLikeChange,
 }: ClothesListProps) {
+
+  const toggleLike = async (
+    id: string | number,
+    currentIsLiked: boolean
+  ) => {
+    try {
+      const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL;
+
+      const newLikedState = !currentIsLiked;
+
+      const response = await fetch(
+        `${API_BASE_URL}/products/${id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            isLiked: newLikedState,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Не удалось изменить лайк");
+      }
+
+      onLikeChange(id, newLikedState);
+
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   if (loading) {
     return (
       <View style={styles.center}>
@@ -46,21 +82,32 @@ function ClothesList({
         showsVerticalScrollIndicator={false}
         columnWrapperStyle={styles.row}
         contentContainerStyle={styles.listContent}
+
         renderItem={({ item }) => (
           <Pressable
             style={styles.card}
             onPress={() => navigateToProduct(item)}
           >
             <Clothes
+              id={item.id}
               title={item.title}
               price={item.price}
               image={item.image}
+              isLiked={item.isLiked}
+              onToggleLike={() =>
+                toggleLike(
+                  item.id!,
+                  item.isLiked ?? false
+                )
+              }
             />
           </Pressable>
         )}
+
         keyExtractor={(item, index) =>
           item.id ? item.id.toString() : index.toString()
         }
+
         ListEmptyComponent={
           <View style={styles.emptyContainer}>
             <Text style={styles.emptyText}>

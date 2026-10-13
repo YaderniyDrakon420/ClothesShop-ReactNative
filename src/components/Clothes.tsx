@@ -1,4 +1,12 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from "react-native";
+
+import { Ionicons } from "@expo/vector-icons";
 
 export interface ClothesProps {
   id?: string | number;
@@ -9,9 +17,27 @@ export interface ClothesProps {
   rating?: string;
   size?: string[];
   color?: string[];
+  isLiked?: boolean;
+  onToggleLike?: () => void;
 }
 
-function Clothes({ title, price, image }: ClothesProps) {
+function Clothes({
+  id,
+  title,
+  price,
+  image,
+  isLiked = false,
+  onToggleLike,
+}: ClothesProps) {
+
+  console.log(
+    title,
+    "VALUE:",
+    isLiked,
+    "TYPE:",
+    typeof isLiked
+  );
+
   return (
     <View style={styles.card}>
       <View style={styles.imageContainer}>
@@ -20,6 +46,17 @@ function Clothes({ title, price, image }: ClothesProps) {
           style={styles.image}
           resizeMode="contain"
         />
+
+        <TouchableOpacity
+          style={styles.heart}
+          onPress={onToggleLike}
+        >
+          <Ionicons
+            name={isLiked ? "heart" : "heart-outline"}
+            size={28}
+            color={isLiked ? "red" : "black"}
+          />
+        </TouchableOpacity>
       </View>
 
       <Text style={styles.title} numberOfLines={2}>
@@ -68,6 +105,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "700",
     color: "#222",
+  },
+
+  heart: {
+    position: "absolute",
+    top: 8,
+    right: 8,
   },
 });
 

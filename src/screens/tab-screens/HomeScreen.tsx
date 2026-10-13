@@ -60,6 +60,16 @@ export default function HomeScreen({ navigation }: Props) {
     );
   }, [searchQuery, clothes]);
 
+    const handleLikeChange = (id: string | number, isLiked: boolean) => {
+  setClothes((prev) =>
+    prev.map((product) =>
+      product.id === id
+        ? { ...product, isLiked }
+        : product
+    )
+  );
+};
+
   return (
     <SafeAreaView
       style={{ flex: 1 }}
@@ -93,6 +103,7 @@ export default function HomeScreen({ navigation }: Props) {
       clothes={filteredProducts}
       loading={loading}
       error={error}
+      onLikeChange={handleLikeChange}
       navigateToProduct={(product) =>
         navigation.navigate("ClothesDetail", {
           id: product.id,
@@ -103,11 +114,10 @@ export default function HomeScreen({ navigation }: Props) {
           rating: product.rating,
           size: product.size,
           color: product.color,
-
-      })
-    }
-  />
-    </SafeAreaView>
+        })
+      }
+    />
+        </SafeAreaView>
   );
 }
 

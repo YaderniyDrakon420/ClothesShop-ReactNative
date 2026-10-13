@@ -4,17 +4,22 @@ import ProfileScreen from "../screens/tab-screens/ProfileScreen"
 import { Image} from "react-native"
 import SearchScreen from "../screens/tab-screens/SearchScreen"
 import DetailsStackNavigator from "./DetailsStackNavigator"
-import LikedScreen from "../screens/tab-screens/LikedScreen"
-import CartScreen from "../screens/tab-screens/CartScreen"
+import LikedScreen from "../screens/LikedScreen"
+import CartScreen from "../screens/CartScreen"
+import DetailsScreen from "../screens/tab-screens/DetailsScreen"
+import { NavigatorScreenParams } from "@react-navigation/native";
+import { RootStackParamList } from "./DetailsStackNavigator";
+
 
 export type RootTabParamList = {
-    Home: undefined,
-    Profile: undefined,
-    Search: undefined,
-    Liked:undefined,
-    Cart:undefined,
-    Details:undefined
-}
+  Home: NavigatorScreenParams<RootStackParamList>;
+  Profile: undefined;
+  Search: undefined;
+  Liked: undefined;
+  Cart: undefined;
+  Details: undefined;
+};
+
 
 const Tab = createBottomTabNavigator<RootTabParamList>()
 const AppTabNavigator = () => {
@@ -102,7 +107,7 @@ const AppTabNavigator = () => {
                 })} />
             <Tab.Screen
                 name="Details"
-                component={DetailsStackNavigator}
+                component={DetailsScreen}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image

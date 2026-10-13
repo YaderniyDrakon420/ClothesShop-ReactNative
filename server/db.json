@@ -17,7 +17,8 @@
         "Blue",
         "Dark Blue"
       ],
-      "isInCart": false
+      "isInCart": false,
+      "isLiked": true
     },
     {
       "id": "p2",
@@ -37,7 +38,8 @@
         "Beige",
         "Light Blue"
       ],
-      "isInCart": false
+      "isInCart": true,
+      "isLiked": false
     },
     {
       "id": "p3",
@@ -58,7 +60,8 @@
         "Cream",
         "Black"
       ],
-      "isInCart": false
+      "isInCart": false,
+      "isLiked": false
     },
     {
       "id": "p4",
@@ -79,7 +82,8 @@
         "Gray",
         "Green"
       ],
-      "isInCart": false
+      "isInCart": false,
+      "isLiked": false
     },
     {
       "id": "p5",
@@ -97,7 +101,8 @@
       "color": [
         "Black"
       ],
-      "isInCart": true
+      "isInCart": true,
+      "isLiked": false
     },
     {
       "id": "p6",
@@ -117,7 +122,8 @@
         "Blue",
         "Black"
       ],
-      "isInCart": false
+      "isInCart": true,
+      "isLiked": true
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
