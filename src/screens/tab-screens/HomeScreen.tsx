@@ -122,32 +122,33 @@ export default function HomeScreen({ navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
-    header: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 10,
-  },
+header: {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginTop: 0,
+  marginBottom: 10,
+  paddingHorizontal: 15,
+},
 
-  shop: {
-    width: 115,
-    height: 47,
-    resizeMode: "contain",
-  },
+shop: {
+  width: 150,
+  height: 55,
+  resizeMode: "contain",
+},
 
-  cart: {
-    width: 30,
-    height: 30,
-    resizeMode: "contain",
-    marginLeft: 10,
-  },
+cart: {
+  width: 38,
+  height: 38,
+  resizeMode: "contain",
+},
 
-  search: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "#E5E8EB",
-    borderRadius: 10,
-    paddingHorizontal: 12,
-    height: 40,
-  },
+search: {
+  backgroundColor: "#E5E8EB",
+  borderRadius: 10,
+  paddingHorizontal: 12,
+  height: 42,
+  marginHorizontal: 15,
+  marginBottom: 10,
+},
 });

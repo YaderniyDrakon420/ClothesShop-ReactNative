@@ -382,7 +382,7 @@
         "Silver",
         "Gold"
       ],
-      "isInCart": false,
+      "isInCart": true,
       "isLiked": false,
       "categoryId": "cat4"
     },

@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
+  Alert,
 } from "react-native";
 
 import { useState } from "react";
@@ -56,27 +57,56 @@ export default function ClothesDetailScreen({ route }: Props) {
     }
   };
 
-  const addToCart = async () => {
+const addToCart = async () => {
   try {
     const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL;
 
-    const response = await fetch(`${API_BASE_URL}/products/${route.params.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        isInCart: true,
-      }),
-    });
+    const response = await fetch(
+      `${API_BASE_URL}/products/${route.params.id}`
+    );
 
     if (!response.ok) {
+      throw new Error("Не удалось получить товар");
+    }
+
+    const product = await response.json();
+
+    if (product.isInCart) {
+      Alert.alert(
+        "Товар уже в корзине",
+        "Нельзя добавить этот товар повторно."
+      );
+      return;
+    }
+
+    const updateResponse = await fetch(
+      `${API_BASE_URL}/products/${route.params.id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          isInCart: true,
+        }),
+      }
+    );
+
+    if (!updateResponse.ok) {
       throw new Error("Не удалось добавить товар");
     }
 
-    console.log("Товар добавлен в корзину");
+    Alert.alert(
+      "Успешно",
+      "Товар добавлен в корзину!"
+    );
   } catch (error) {
     console.error(error);
+
+    Alert.alert(
+      "Ошибка",
+      "Не удалось добавить товар в корзину."
+    );
   }
 };
 

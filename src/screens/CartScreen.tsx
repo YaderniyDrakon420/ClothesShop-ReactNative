@@ -4,6 +4,8 @@ import {
   Image,
   StyleSheet,
   FlatList,
+  Alert,
+  TouchableOpacity,
 } from "react-native";
 
 import { useEffect, useState } from "react";
@@ -55,6 +57,38 @@ export default function CartScreen() {
       </View>
     );
   }
+  
+const removeFromCart = async (id: string) => {
+  try {
+    const response = await fetch(
+      `${API_BASE_URL}/products/${id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          isInCart: false,
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Не удалось удалить товар из корзины");
+    }
+
+    setCartProducts((prev) =>
+      prev.filter((product) => product.id !== id)
+    );
+  } catch (error) {
+    console.error(error);
+
+    Alert.alert(
+      "Ошибка",
+      "Не удалось удалить товар из корзины."
+    );
+  }
+};
 
   return (
     <View style={styles.container}>
@@ -74,8 +108,7 @@ export default function CartScreen() {
                 source={{ uri: item.image }}
                 style={styles.image}
               />
-
-              <View style={styles.info}>
+                    <View style={styles.info}>
                 <Text style={styles.productTitle}>
                   {item.title}
                 </Text>
@@ -84,6 +117,13 @@ export default function CartScreen() {
                   ${item.price.toFixed(2)}
                 </Text>
               </View>
+
+              <TouchableOpacity
+                style={styles.removeButton}
+                onPress={() => removeFromCart(item.id)}
+              >
+                <Text style={styles.removeButtonText}>✕</Text>
+              </TouchableOpacity>
             </View>
           )}
         />
@@ -144,4 +184,20 @@ const styles = StyleSheet.create({
     color: "#279b75",
     marginTop: 8,
   },
+
+  removeButton: {
+  width: 32,
+  height: 32,
+  borderRadius: 16,
+  backgroundColor: "#fff",
+  justifyContent: "center",
+  alignItems: "center",
+  marginLeft: 8,
+},
+
+removeButtonText: {
+  fontSize: 18,
+  fontWeight: "700",
+  color: "#333",
+},
 });

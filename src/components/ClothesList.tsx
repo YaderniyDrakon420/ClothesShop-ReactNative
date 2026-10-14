@@ -125,6 +125,7 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 10,
     marginTop: 15,
+    paddingBottom: 100,
   },
 
   listContent: {

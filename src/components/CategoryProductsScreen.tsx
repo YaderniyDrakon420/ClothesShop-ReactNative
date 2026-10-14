@@ -6,20 +6,28 @@ import {
     Image,
     StyleSheet,
     ActivityIndicator,
+    TouchableOpacity,
 } from "react-native";
-import { useRoute } from "@react-navigation/native";
-
+import { useNavigation, useRoute } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../navigation/DetailsStackNavigator";
 interface Product {
     id: string;
     title: string;
     price: number;
     image: string;
     categoryId?: string;
+    description?: string;
+    rating?: number;
+    size?: string[];
+    color?: string[];
 }
 
 export default function CategoryProductsScreen() {
     const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL;
     const route = useRoute<any>();
+    const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
     const { categoryId, categoryTitle } = route.params;
 
@@ -86,20 +94,40 @@ export default function CategoryProductsScreen() {
                 columnWrapperStyle={styles.row}
                 contentContainerStyle={styles.list}
                 renderItem={({ item }) => (
-                    <View style={styles.product}>
-                        {item.image ? (
-                            <Image
-                                source={{ uri: item.image }}
-                                style={styles.image}
-                            />
-                        ) : (
-                            <View style={styles.placeholder} />
-                        )}
+    <TouchableOpacity
+        style={styles.product}
+        activeOpacity={0.8}
+        onPress={() =>
+            navigation.navigate("ClothesDetail", {
+                id: item.id,
+                title: item.title,
+                price: item.price,
+                image: item.image,
+                description: item.description ?? "",
+                rating: String(item.rating ?? 0),
+                size: item.size ?? [],
+                color: item.color ?? [],
+            })
+        }
+    >
+        {item.image ? (
+            <Image
+                source={{ uri: item.image }}
+                style={styles.image}
+            />
+        ) : (
+            <View style={styles.placeholder} />
+        )}
 
-                        <Text style={styles.title}>{item.title}</Text>
-                        <Text style={styles.price}>{item.price} €</Text>
-                    </View>
-                )}
+        <Text style={styles.title}>
+            {item.title}
+        </Text>
+
+        <Text style={styles.price}>
+            {item.price} €
+        </Text>
+    </TouchableOpacity>
+)}
                 ListEmptyComponent={
                     <Text>В этой категории пока нет товаров.</Text>
                 }
